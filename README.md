@@ -2,18 +2,19 @@
 
 ## Directory
 
-* -vagrant
-    * -etc
-        * -nginx
-           * -servers
-               * localhost.conf
-           * nginx.conf
-* -www
-* -logs
-* -apps
-* -java
-* -go
-* -rust
+* -workspace
+    * -vagrant
+        * -etc
+            * -nginx
+            * -servers
+                * localhost.conf
+            * nginx.conf
+    * -www
+    * -logs
+    * -apps
+    * -java
+    * -go
+    * -rust
 
 ## Config
 
