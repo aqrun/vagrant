@@ -2,7 +2,7 @@
 
 ## Directory
 
-* -workspace
+* -workspace                            
     * -vagrant
         * -etc
             * -nginx
@@ -11,6 +11,8 @@
             * nginx.conf
     * -www
     * -logs
+        * -nginx
+    * -db
     * -apps
     * -java
     * -go
