@@ -21,14 +21,15 @@
 ## Config
 
 * `sudo mount -t vboxsf workspace /home/aqrun/workspace -o uid=1000,gid=1000`
-* `workspace /home/aqrun/workspace vboxsf defaults 0 0`
+* `workspace /home/aqrun/workspace vboxsf defaults,umask=002,uid=1000,gid=1000 0 0`
 * `VBoxManage.exe setextradata ubuntu1804 VBoxInternal2/SharedFoldersEnableSymlinksCreate/workspace 1`
-* `VBoxManage.exe getextradata workspace enumerate`
+* `VBoxManage.exe getextradata ubuntu1804 enumerate`
 
 ## php 7.1 mysql
 
+* apt-get install gcc make autoconf libc-dev pkg-config
 * apt-add-repository ppa:ondrej/php
-* apt-get install -y php7.1 php7.1-cgi php7.1-cli php7.1-dev php7.1-fpm php7.1-phpdbg php7.1-bcmath php7.1-bz2 php7.1-common php7.1-curl php7.1-dba php7.1-enchant php7.1-gd php7.1-gmp php7.1-imap php7.1-interbase php7.1-intl php7.1-json php7.1-ldap php7.1-mbstring php7.1-mcrypt php7.1-mysql php7.1-odbc php7.1-pspell php7.1-readline php7.1-recode php7.1-snmp php7.1-soap php7.1-sqlite3 php7.1-sybase php7.1-tidy php7.1-xml php7.1-xmlrpc php7.1-zip php7.1-opcache php7.1-xsl
+* apt-get install -y php7.1 php7.1-cgi php7.1-cli  php7.1-fpm php7.1-phpdbg php7.1-bcmath php7.1-bz2 php7.1-common php7.1-curl php7.1-dba php7.1-enchant php7.1-gd php7.1-gmp php7.1-imap php7.1-interbase php7.1-intl php7.1-json php7.1-ldap php7.1-mbstring php7.1-mcrypt php7.1-mysql php7.1-odbc php7.1-pspell php7.1-readline php7.1-recode php7.1-snmp php7.1-soap php7.1-sqlite3 php7.1-sybase php7.1-tidy php7.1-xml php7.1-xmlrpc php7.1-zip php7.1-opcache php7.1-xsl php7.1-dev
 * apt-get install mysql-server
 * sudo mysql_secure_installation
 
@@ -49,8 +50,7 @@
 
 ## yii2
 
-* composer global require "fxp/composer-ass
-et-plugin"
+* composer global require "fxp/composer-asset-plugin"
 
 ## composer
 
@@ -61,4 +61,19 @@ et-plugin"
 * install
     * https://www.yarnpkg.com/zh-Hans/docs/install#debian-stable
 * node-sass
+    * yarn config set registry https://registry.npm.taobao.org -g
     * yarn config set sass_binary_site http://cdn.npm.taobao.org/dist/node-sass -g
+
+## VBox ubuntu server intall guest additions
+
+```shell
+apt-get update
+apt-get upgrade
+apt-get install dkms
+sudo aptitude install build-essential
+sudo reboot
+# 设备 -> 安装增强工具
+sudo  mount /dev/cdrom /mnt/
+sudo  /mnt/VBoxLinuxAdditions-x86.run
+sudo umount /mnt/
+```
