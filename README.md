@@ -21,7 +21,7 @@
 ## Config
 
 * `sudo mount -t vboxsf workspace /home/aqrun/workspace -o uid=1000,gid=1000`
-* `workspace /home/aqrun/workspace vboxsf defaults,umask=002,uid=1000,gid=1000 0 0`
+* `workspace /home/aqrun/workspace vboxsf uid=1000,gid=1000,rw,dmode=755,fmode=755,noauto,x-systemd.automount 0 0`
 * `VBoxManage.exe setextradata ubuntu1804 VBoxInternal2/SharedFoldersEnableSymlinksCreate/workspace 1`
 * `VBoxManage.exe getextradata ubuntu1804 enumerate`
 
@@ -32,6 +32,9 @@
 * apt-get install -y php7.1 php7.1-cgi php7.1-cli  php7.1-fpm php7.1-phpdbg php7.1-bcmath php7.1-bz2 php7.1-common php7.1-curl php7.1-dba php7.1-enchant php7.1-gd php7.1-gmp php7.1-imap php7.1-interbase php7.1-intl php7.1-json php7.1-ldap php7.1-mbstring php7.1-mcrypt php7.1-mysql php7.1-odbc php7.1-pspell php7.1-readline php7.1-recode php7.1-snmp php7.1-soap php7.1-sqlite3 php7.1-sybase php7.1-tidy php7.1-xml php7.1-xmlrpc php7.1-zip php7.1-opcache php7.1-xsl php7.1-dev
 * apt-get install mysql-server
 * sudo mysql_secure_installation
+* sql_mode=NO_AUTO_VALUE_ON_ZERO,STRICT_TRANS_TABLES,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION,PIPES_AS_CONCAT,ANSI_QUOTES
+* grant all privileges on *.* to 'root'@'%' identified by '123456';
+* flush privileges; 
 
 ## Vagrant
 
