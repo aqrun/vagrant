@@ -3,3 +3,22 @@
 192.168.100.241     localhost.my
 192.168.100.241     lxcms.my
 192.168.100.241     www.dten.my
+
+
+192.168.1.241     api.dten.my
+192.168.1.241     cn.dten.my
+192.168.1.241     localhost.my
+192.168.1.241     lxcms.my
+192.168.1.241     lxcms-new.my
+192.168.1.241     www.dten.my
+192.168.1.241     dolphin.my
+192.168.1.241     bealock.my
+192.168.1.241     t12.bealock.my
+192.168.1.241     drupal.my
+192.168.1.241     laratest.my
+192.168.1.241     october.my
+192.168.1.241     demo.laravel-admin.my
+192.168.1.241     xblog.my
+192.168.1.241     bealock-cn.my
+192.168.1.241     fruits.my
+192.168.1.241		shop.dten.my

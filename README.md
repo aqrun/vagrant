@@ -34,6 +34,8 @@
 * sudo mysql_secure_installation
 * sql_mode=NO_AUTO_VALUE_ON_ZERO,STRICT_TRANS_TABLES,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION,PIPES_AS_CONCAT,ANSI_QUOTES
 * grant all privileges on *.* to 'root'@'%' identified by '123456';
+* select host,user,plugin,authentication_string from user;
+* update user set plugin='mysql_native_password',authentication_string='xxx' where host='localhost' and user='root';
 * flush privileges; 
 
 ## Vagrant
